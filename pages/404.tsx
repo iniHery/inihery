@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
-import Head from "next/head";
-import Body from "ds/Table/Body";
+
 import Image from "next/image";
 
 // Navbar Fixed
