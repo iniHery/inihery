@@ -259,7 +259,6 @@ function Portofolio() {
                   width={1000}
                   height={0}
                 />
-                {/* <img src="/images/p1.jpg" alt="foto profile" width="w-full" /> */}
               </div>
               <h3 className="font-semibold text-xl text-slate-800 mt-5 mb-3">
                 Fintechdb
@@ -273,7 +272,6 @@ function Portofolio() {
 
             <div className="mb-12 p-4 md:w-1/2">
               <div className="rounded-md shadow-md overflow-hidden">
-                {/* <img src="/images/p3.jpg" alt="foto profile" width="w-full" /> */}
                 <Image
                   src="/images/p3.jpg"
                   alt="foto profile"
@@ -299,7 +297,6 @@ function Portofolio() {
                   width={1000}
                   height={0}
                 />
-                {/* <img src="/images/p2.jpg" alt="foto profile" width="w-full" /> */}
               </div>
               <h3 className="font-semibold text-xl text-slate-800 mt-5 mb-3">
                 Fintechdb
@@ -319,7 +316,6 @@ function Portofolio() {
                   width={1000}
                   height={0}
                 />
-                {/* <img src="/images/p1.jpg" alt="foto profile" width="w-full" /> */}
               </div>
               <h3 className="font-semibold text-xl text-slate-800 mt-5 mb-3">
                 Fintechdb
