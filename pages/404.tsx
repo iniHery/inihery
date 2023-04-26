@@ -253,7 +253,13 @@ function Portofolio() {
           <div className="w-full px-4 flex flex-wrap justify-center xl:w-10/12 xl:mx-auto">
             <div className="mb-12 p-4 md:w-1/2">
               <div className="rounded-md shadow-md overflow-hidden">
-                <img src="/images/p1.jpg" alt="foto profile" width="w-full" />
+                <Image
+                  src="/images/p1.jpg"
+                  alt="foto profile"
+                  width={1000}
+                  height={0}
+                />
+                {/* <img src="/images/p1.jpg" alt="foto profile" width="w-full" /> */}
               </div>
               <h3 className="font-semibold text-xl text-slate-800 mt-5 mb-3">
                 Fintechdb
@@ -267,7 +273,13 @@ function Portofolio() {
 
             <div className="mb-12 p-4 md:w-1/2">
               <div className="rounded-md shadow-md overflow-hidden">
-                <img src="/images/p3.jpg" alt="foto profile" width="w-full" />
+                {/* <img src="/images/p3.jpg" alt="foto profile" width="w-full" /> */}
+                <Image
+                  src="/images/p3.jpg"
+                  alt="foto profile"
+                  width={1000}
+                  height={0}
+                />
               </div>
               <h3 className="font-semibold text-xl text-slate-800 mt-5 mb-3">
                 Fintechdb
@@ -281,7 +293,13 @@ function Portofolio() {
 
             <div className="mb-12 p-4 md:w-1/2">
               <div className="rounded-md shadow-md overflow-hidden">
-                <img src="/images/p2.jpg" alt="foto profile" width="w-full" />
+                <Image
+                  src="/images/p2.jpg"
+                  alt="foto profile"
+                  width={1000}
+                  height={0}
+                />
+                {/* <img src="/images/p2.jpg" alt="foto profile" width="w-full" /> */}
               </div>
               <h3 className="font-semibold text-xl text-slate-800 mt-5 mb-3">
                 Fintechdb
@@ -295,7 +313,13 @@ function Portofolio() {
 
             <div className="mb-12 p-4 md:w-1/2">
               <div className="rounded-md shadow-md overflow-hidden">
-                <img src="/images/p1.jpg" alt="foto profile" width="w-full" />
+                <Image
+                  src="/images/p1.jpg"
+                  alt="foto profile"
+                  width={1000}
+                  height={0}
+                />
+                {/* <img src="/images/p1.jpg" alt="foto profile" width="w-full" /> */}
               </div>
               <h3 className="font-semibold text-xl text-slate-800 mt-5 mb-3">
                 Fintechdb
@@ -338,14 +362,24 @@ function Portofolio() {
                   target="blank"
                   className="md:max-w-[60px] max-w-[50px] flex justify-center items-center mx-4 py-4 grayscale opacity-90 transition duration-500 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8"
                 >
-                  <img src="icon/Figma.svg" alt="html" />
+                  <Image
+                    src="/icon/Figma.svg"
+                    alt="foto profile"
+                    width={1000}
+                    height={0}
+                  />
                 </a>
                 <a
                   href="https://nextjs.org/"
                   target="blank"
                   className="md:max-w-[100px] max-w-[100px] flex justify-center items-center mx-4 py-4 grayscale opacity-90 transition duration-500 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8"
                 >
-                  <img src="icon/Nextjs.png" alt="html" />
+                  <Image
+                    src="/icon/Nextjs.png"
+                    alt="foto profile"
+                    width={1000}
+                    height={0}
+                  />
                 </a>
                 <a
                   href="https://legacy.reactjs.org/"
@@ -359,32 +393,54 @@ function Portofolio() {
                   target="blank"
                   className="md:max-w-[100px] max-w-[80px] flex justify-center items-center mx-4 py-4 grayscale opacity-90 transition duration-500 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8"
                 >
-                  <img src="icon/js.png" alt="html" />
+                  <Image
+                    src="/icon/js.png"
+                    alt="foto profile"
+                    width={1000}
+                    height={0}
+                  />
                 </a>
                 <a
                   href="https://html5up.net/"
                   target="blank"
                   className="md:max-w-[100px] max-w-[80px] flex justify-center items-center mx-4 py-4 grayscale opacity-90 transition duration-500 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8"
                 >
-                  <img src="icon/html.png" alt="html" />
+                  <Image
+                    src="/icon/html.png"
+                    alt="foto profile"
+                    width={1000}
+                    height={0}
+                  />
                 </a>
                 <a
                   href="https://www.css3.com/"
                   target="blank"
                   className="md:max-w-[100px] max-w-[60px] flex justify-center mx-4 py-4 grayscale opacity-90 transition duration-500 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8"
                 >
-                  <img
-                    src="icon/css.png"
-                    alt="html"
+                  <Image
+                    src="/icon/css.png"
+                    alt="foto profile"
+                    width={1000}
+                    height={0}
                     className="md:w-[70px] h-[auto]"
                   />
+                  {/* <img
+                    src="icon/css.png"
+                    alt="html"
+                    
+                  /> */}
                 </a>
                 <a
                   href="https://tailwindcss.com/"
                   target="blank"
                   className="md:max-w-[100px] max-w-[80px] flex justify-center items-center mx-4 py-4 grayscale opacity-60 transition duration-500 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8"
                 >
-                  <img src="icon/tw1.png" alt="html" />
+                  <Image
+                    src="/icon/tw1.png"
+                    alt="foto profile"
+                    width={1000}
+                    height={0}
+                  />
                 </a>
               </div>
             </div>
@@ -490,19 +546,19 @@ function Portofolio() {
             </div>
 
             <p className="font-medium text-xs text-slate-500 text-center">
-              Create by <span className="text-red">❤️</span>
+              Made with <span className="text-red">❤️</span> by
               <a
                 href="https://instagram.com/iniheryy?igshid=ZDdkNTZiNTM="
                 className="font-semibold text-purple-500 px-2 font-jetBrainsMono"
               >
                 iniHery
               </a>
-              menggunakan
+              Use
               <a
                 href="https://tailwindcss.com/"
                 className="font-semibold text-sky-500 pl-2"
               >
-                Tailwind.css
+                Tailwind CSS.
               </a>
             </p>
           </div>
