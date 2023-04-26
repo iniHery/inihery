@@ -119,7 +119,7 @@ function Portofolio() {
           <div className="flex flex-wrap">
             <div className="w-full self-center px-4 lg:w-1/2">
               <h1 className="text-5xl font-semibold text-white md:text-7xl">
-                Hi, I'm Hery
+                Hi, I&apos;m Hery
               </h1>
               <h2 className="font-medium text-purple-400 text-3xl mb-5 lg:text-5xl">
                 I am Web Developer
@@ -182,7 +182,7 @@ function Portofolio() {
             </div>
             <div className="w-full px-4 lg:w-1/2">
               <h3 className="font-semibold text-2xl text-purple-400 mb-4 lg:text-3xl lg:pt-30">
-                Let's be friends
+                Let&apos;s be friends
               </h3>
               <p className="font-medium text-base mb-6 lg:text-lg">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum
