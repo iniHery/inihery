@@ -38,6 +38,26 @@ if (typeof document !== "undefined") {
   });
 }
 
+const container = {
+  hidden: { opacity: 1, scale: 0 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      delayChildren: 0.3,
+      staggerChildren: 0.2,
+    },
+  },
+};
+
+const item = {
+  hidden: { y: 20, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+  },
+};
+
 function Portofolio() {
   return (
     <div>
@@ -47,69 +67,81 @@ function Portofolio() {
         <div className="container">
           <div className="flex items-center justify-between relative">
             <div className="px-4">
-              <motion.button
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 2 }}
+                viewport={{ once: true }}
               >
-                <a href="#home" className="block py-6">
-                  <Image
-                    src="/icon/logo1.png"
-                    alt="foto profile"
-                    width={45}
-                    height={0}
-                    className="max-w-full mx-auto"
-                  />
-                </a>
-              </motion.button>
+                <motion.button
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                >
+                  <a href="#home" className="block py-6">
+                    <Image
+                      src="/icon/logo1.png"
+                      alt="foto profile"
+                      width={45}
+                      height={0}
+                      className="max-w-full mx-auto"
+                    />
+                  </a>
+                </motion.button>
+              </motion.div>
             </div>
-            <div className="flex items-center px-4">
-              <button
-                id="hamburger"
-                name="hamburger"
-                type="button"
-                className="block absolute right-4 lg:hidden"
-              >
-                <span className="hamburger-line transition duration-300 ease-in-out origin-top-left"></span>
-                <span className="hamburger-line transition duration-300 ease-in-out"></span>
-                <span className="hamburger-line transition duration-300 ease-in-out origin-bottom-left"></span>
-              </button>
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 2 }}
+              viewport={{ once: true }}
+            >
+              <div className="flex items-center px-4">
+                <button
+                  id="hamburger"
+                  name="hamburger"
+                  type="button"
+                  className="block absolute right-4 lg:hidden"
+                >
+                  <span className="hamburger-line transition duration-300 ease-in-out origin-top-left"></span>
+                  <span className="hamburger-line transition duration-300 ease-in-out"></span>
+                  <span className="hamburger-line transition duration-300 ease-in-out origin-bottom-left"></span>
+                </button>
 
-              <nav
-                id="nav-menu"
-                className="hidden absolute py-5 bg-white shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none"
-              >
-                <ul className="block lg:flex">
-                  <li className="group">
-                    <a
-                      href="#home"
-                      className="text-base md:text-white text-black py-2 mx-8 flex
+                <nav
+                  id="nav-menu"
+                  className="hidden absolute py-5 bg-white shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none"
+                >
+                  <ul className="block lg:flex">
+                    <li className="group">
+                      <a
+                        href="#home"
+                        className="text-base md:text-white text-black py-2 mx-8 flex
                     group-hover:text-[#00e4ff] transition ease-in-out duration-300"
-                    >
-                      Home
-                    </a>
-                  </li>
+                      >
+                        Home
+                      </a>
+                    </li>
 
-                  <li className="group">
-                    <a
-                      href="#project"
-                      className="text-base md:text-white text-black py-2 mx-8 flex
+                    <li className="group">
+                      <a
+                        href="#project"
+                        className="text-base md:text-white text-black py-2 mx-8 flex
                     group-hover:text-[#00e4ff] transition ease-in-out duration-300"
-                    >
-                      Project
-                    </a>
-                  </li>
-                  <li className="group">
-                    <a
-                      href="#experience"
-                      className="text-base md:text-white text-black py-2 mx-8 flex
+                      >
+                        Project
+                      </a>
+                    </li>
+                    <li className="group">
+                      <a
+                        href="#experience"
+                        className="text-base md:text-white text-black py-2 mx-8 flex
                     group-hover:text-[#00e4ff] transition ease-in-out duration-300"
-                    >
-                      Experience
-                    </a>
-                  </li>
-                </ul>
-              </nav>
-            </div>
+                      >
+                        Experience
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </motion.div>
           </div>
         </div>
       </header>
@@ -254,100 +286,186 @@ function Portofolio() {
         <div className="container">
           <div className="w-full px-4">
             <div className="max-w-xl mx-auto text-center mb-16">
-              <h4 className="font-semibold text-lg text-[#00e4ff] mb-2">
-                Project
-              </h4>
-              <h2 className="font-bold text-slate-800 text-3xl mb-4 sm:text-4xl lg:text-5xl">
-                Latest project
-              </h2>
-              <p className="font-medium text-md text-slate-800 md:text-lg">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Est et
-                veritatis error excepturi ducimus, molestias alias officia
-                veniam quod autem!
-              </p>
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 2 }}
+                viewport={{ once: true }}
+              >
+                <h4 className="font-semibold text-lg text-[#00e4ff] mb-2">
+                  Project
+                </h4>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 2 }}
+                viewport={{ once: true }}
+              >
+                <h2 className="font-bold text-slate-800 text-3xl mb-4 sm:text-4xl lg:text-5xl">
+                  Latest project
+                </h2>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 2 }}
+                viewport={{ once: true }}
+              >
+                <p className="font-medium text-md text-slate-800 md:text-lg">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Est
+                  et veritatis error excepturi ducimus, molestias alias officia
+                  veniam quod autem!
+                </p>
+              </motion.div>
             </div>
-            <motion.div
-              initial={{ opacity: 0, scale: 0.5 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5 }}
-            />
           </div>
 
           <div className="w-full px-4 flex flex-wrap justify-center xl:w-10/12 xl:mx-auto">
             <div className="mb-12 p-4 md:w-1/2">
-              <div className="rounded-md shadow-md overflow-hidden">
-                <Image
-                  src="/images/p1.jpg"
-                  alt="foto profile"
-                  width={1000}
-                  height={0}
-                />
-              </div>
-              <h3 className="font-semibold text-xl text-slate-800 mt-5 mb-3">
-                Fintechdb
-              </h3>
-              <p className="font-medium text-base text-slate-800">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Sapiente debitis autem dolor eligendi, officia eos facilis
-                voluptatum unde tempore placeat!
-              </p>
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 2 }}
+                viewport={{ once: true }}
+              >
+                <div className="rounded-md shadow-md overflow-hidden">
+                  <Image
+                    src="/images/p1.jpg"
+                    alt="foto profile"
+                    width={1000}
+                    height={0}
+                  />
+                </div>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 2 }}
+                viewport={{ once: true }}
+              >
+                <h3 className="font-semibold text-xl text-slate-800 mt-5 mb-3">
+                  Fintechdb
+                </h3>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 2 }}
+                viewport={{ once: true }}
+              >
+                <p className="font-medium text-base text-slate-800">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Sapiente debitis autem dolor eligendi, officia eos facilis
+                  voluptatum unde tempore placeat!
+                </p>
+              </motion.div>
             </div>
 
             <div className="mb-12 p-4 md:w-1/2">
-              <div className="rounded-md shadow-md overflow-hidden">
-                <Image
-                  src="/images/p3.jpg"
-                  alt="foto profile"
-                  width={1000}
-                  height={0}
-                />
-              </div>
-              <h3 className="font-semibold text-xl text-slate-800 mt-5 mb-3">
-                Fintechdb
-              </h3>
-              <p className="font-medium text-base text-slate-800">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Sapiente debitis autem dolor eligendi, officia eos facilis
-                voluptatum unde tempore placeat!
-              </p>
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 2 }}
+                viewport={{ once: true }}
+              >
+                <div className="rounded-md shadow-md overflow-hidden">
+                  <Image
+                    src="/images/p3.jpg"
+                    alt="foto profile"
+                    width={1000}
+                    height={0}
+                  />
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 2 }}
+                viewport={{ once: true }}
+              >
+                <h3 className="font-semibold text-xl text-slate-800 mt-5 mb-3">
+                  Perfinal
+                </h3>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 2 }}
+                viewport={{ once: true }}
+              >
+                <p className="font-medium text-base text-slate-800">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Sapiente debitis autem dolor eligendi, officia eos facilis
+                  voluptatum unde tempore placeat!
+                </p>
+              </motion.div>
             </div>
 
             <div className="mb-12 p-4 md:w-1/2">
-              <div className="rounded-md shadow-md overflow-hidden">
-                <Image
-                  src="/images/p2.jpg"
-                  alt="foto profile"
-                  width={1000}
-                  height={0}
-                />
-              </div>
-              <h3 className="font-semibold text-xl text-slate-800 mt-5 mb-3">
-                Fintechdb
-              </h3>
-              <p className="font-medium text-base text-slate-800">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Sapiente debitis autem dolor eligendi, officia eos facilis
-                voluptatum unde tempore placeat!
-              </p>
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 2 }}
+                viewport={{ once: true }}
+              >
+                <div className="rounded-md shadow-md overflow-hidden">
+                  <Image
+                    src="/images/p2.jpg"
+                    alt="foto profile"
+                    width={1000}
+                    height={0}
+                  />
+                </div>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 2 }}
+                viewport={{ once: true }}
+              >
+                <h3 className="font-semibold text-xl text-slate-800 mt-5 mb-3">
+                  Work
+                </h3>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 2 }}
+                viewport={{ once: true }}
+              >
+                <p className="font-medium text-base text-slate-800">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Sapiente debitis autem dolor eligendi, officia eos facilis
+                  voluptatum unde tempore placeat!
+                </p>
+              </motion.div>
             </div>
 
             <div className="mb-12 p-4 md:w-1/2">
-              <div className="rounded-md shadow-md overflow-hidden">
-                <Image
-                  src="/images/p1.jpg"
-                  alt="foto profile"
-                  width={1000}
-                  height={0}
-                />
-              </div>
-              <h3 className="font-semibold text-xl text-slate-800 mt-5 mb-3">
-                Fintechdb
-              </h3>
-              <p className="font-medium text-base text-slate-800">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Sapiente debitis autem dolor eligendi, officia eos facilis
-                voluptatum unde tempore placeat!
-              </p>
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 2 }}
+                viewport={{ once: true }}
+              >
+                <div className="rounded-md shadow-md overflow-hidden">
+                  <Image
+                    src="/images/p4.jpg"
+                    alt="foto profile"
+                    width={1000}
+                    height={0}
+                  />
+                </div>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 2 }}
+                viewport={{ once: true }}
+              >
+                <h3 className="font-semibold text-xl text-slate-800 mt-5 mb-3">
+                  Nike
+                </h3>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 2 }}
+                viewport={{ once: true }}
+              >
+                <p className="font-medium text-base text-slate-800">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Sapiente debitis autem dolor eligendi, officia eos facilis
+                  voluptatum unde tempore placeat!
+                </p>
+              </motion.div>
             </div>
           </div>
         </div>
@@ -359,16 +477,35 @@ function Portofolio() {
         <div className="container">
           <div className="w-full px-4">
             <div className="mx-auto text-center mb-16">
-              <h4 className="font-semibold text-lg text-[#00e4ff] mb-2">
-                Experience
-              </h4>
-              <h2 className="font-bold text-slate-800 text-3xl mb-4 sm:text-4xl lg:text-5xl">
-                Which i use
-              </h2>
-              <p className="font-medium text-md text-slate-800 md:text-lg">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum
-                perferendis amet velit.
-              </p>
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 2 }}
+                viewport={{ once: true }}
+              >
+                <h4 className="font-semibold text-lg text-[#00e4ff] mb-2">
+                  Experience
+                </h4>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 2 }}
+                viewport={{ once: true }}
+              >
+                <h2 className="font-bold text-slate-800 text-3xl mb-4 sm:text-4xl lg:text-5xl">
+                  Which i use
+                </h2>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 2 }}
+                viewport={{ once: true }}
+              >
+                <p className="font-medium text-md text-slate-800 md:text-lg">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum
+                  perferendis amet velit.
+                </p>
+              </motion.div>
             </div>
           </div>
 
@@ -376,86 +513,177 @@ function Portofolio() {
             <div className="flex felx-wrap items-center justify-center">
               <div className="grid grid-cols-3 grid-rows-3 md:flex md:felx-wrap md:items-center md:justify-center">
                 {/*  */}
-                <a
-                  href="https://www.figma.com/"
-                  target="blank"
-                  className="md:max-w-[60px] max-w-[50px] flex justify-center items-center mx-4 py-4 lg:grayscale opacity-90 lg:transition lg:duration-500 hover:grayscale-0 lg:hover:opacity-100 lg:mx-6 xl:mx-8"
+
+                <motion.ul
+                  className="container"
+                  variants={container}
+                  initial="hidden"
+                  animate="visible"
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
                 >
-                  <Image
-                    src="/icon/Figma.svg"
-                    alt="foto profile"
-                    width={1000}
-                    height={0}
-                  />
-                </a>
-                <a
-                  href="https://nextjs.org/"
-                  target="blank"
-                  className="md:max-w-[100px] max-w-[100px] flex justify-center items-center mx-4 py-4 lg:grayscale opacity-90 lg:transition lg:duration-500 hover:grayscale-0 lg:hover:opacity-100 lg:mx-6 xl:mx-8"
+                  {[0, 1, 2, 3].map((index) => (
+                    <motion.li key={index} className="item" variants={item} />
+                  ))}
+                  <a
+                    href="https://www.figma.com/"
+                    target="blank"
+                    className="md:max-w-[60px] max-w-[50px] flex justify-center items-center mx-4 py-4 lg:grayscale opacity-90 lg:transition lg:duration-300 hover:grayscale-0 lg:hover:opacity-100 lg:mx-6 xl:mx-8"
+                  >
+                    <Image
+                      src="/icon/Figma.svg"
+                      alt="foto profile"
+                      width={1000}
+                      height={0}
+                    />
+                  </a>
+                </motion.ul>
+
+                <motion.ul
+                  className="container"
+                  variants={container}
+                  initial="hidden"
+                  animate="visible"
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
                 >
-                  <Image
-                    src="/icon/Nextjs.png"
-                    alt="foto profile"
-                    width={1000}
-                    height={0}
-                  />
-                </a>
-                <a
-                  href="https://legacy.reactjs.org/"
-                  target="blank"
-                  className="md:max-w-[100px] max-w-[80px] flex justify-center items-center mx-4 py-4 lg:grayscale opacity-90 lg:transition lg:duration-500 hover:grayscale-0 lg:hover:opacity-100 lg:mx-6 xl:mx-8"
+                  {[0, 1, 2, 3].map((index) => (
+                    <motion.li key={index} className="item" variants={item} />
+                  ))}
+                  <a
+                    href="https://nextjs.org/"
+                    target="blank"
+                    className="md:max-w-[100px] max-w-[100px] flex justify-center items-center mx-4 py-4 lg:grayscale opacity-90 lg:transition lg:duration-300 hover:grayscale-0 lg:hover:opacity-100 lg:mx-6 xl:mx-8"
+                  >
+                    <Image
+                      src="/icon/Nextjs.png"
+                      alt="foto profile"
+                      width={1000}
+                      height={0}
+                    />
+                  </a>
+                </motion.ul>
+
+                <motion.ul
+                  className="container"
+                  variants={container}
+                  initial="hidden"
+                  animate="visible"
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
                 >
-                  <img src="icon/React.png" alt="html" />
-                </a>
-                <a
-                  href="https://www.learn-js.org/"
-                  target="blank"
-                  className="md:max-w-[100px] max-w-[80px] flex justify-center items-center mx-4 py-4 lg:grayscale opacity-90 lg:transition lg:duration-500 hover:grayscale-0 lg:hover:opacity-100 lg:mx-6 xl:mx-8"
+                  {[0, 1, 2, 3].map((index) => (
+                    <motion.li key={index} className="item" variants={item} />
+                  ))}
+                  <a
+                    href="https://legacy.reactjs.org/"
+                    target="blank"
+                    className="md:max-w-[100px] max-w-[80px] flex justify-center items-center mx-4 py-4 lg:grayscale opacity-90 lg:transition lg:duration-300 hover:grayscale-0 lg:hover:opacity-100 lg:mx-6 xl:mx-8"
+                  >
+                    <img src="icon/React.png" alt="html" />
+                  </a>
+                </motion.ul>
+
+                <motion.ul
+                  className="container"
+                  variants={container}
+                  initial="hidden"
+                  animate="visible"
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
                 >
-                  <Image
-                    src="/icon/js.png"
-                    alt="foto profile"
-                    width={1000}
-                    height={0}
-                  />
-                </a>
-                <a
-                  href="https://html5up.net/"
-                  target="blank"
-                  className="md:max-w-[100px] max-w-[80px] flex justify-center items-center mx-4 py-4 lg:grayscale opacity-90 lg:transition lg:duration-500 hover:grayscale-0 lg:hover:opacity-100 lg:mx-6 xl:mx-8"
+                  {[0, 1, 2, 3].map((index) => (
+                    <motion.li key={index} className="item" variants={item} />
+                  ))}
+                  <a
+                    href="https://www.learn-js.org/"
+                    target="blank"
+                    className="md:max-w-[100px] max-w-[80px] flex justify-center items-center mx-4 py-4 lg:grayscale opacity-90 lg:transition lg:duration-300 hover:grayscale-0 lg:hover:opacity-100 lg:mx-6 xl:mx-8"
+                  >
+                    <Image
+                      src="/icon/js.png"
+                      alt="foto profile"
+                      width={1000}
+                      height={0}
+                    />
+                  </a>
+                </motion.ul>
+
+                <motion.ul
+                  className="container"
+                  variants={container}
+                  initial="hidden"
+                  animate="visible"
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
                 >
-                  <Image
-                    src="/icon/html.png"
-                    alt="foto profile"
-                    width={1000}
-                    height={0}
-                  />
-                </a>
-                <a
-                  href="https://www.css3.com/"
-                  target="blank"
-                  className="md:max-w-[100px] max-w-[60px] flex justify-center mx-4 py-4 lg:grayscale opacity-90 lg:transition lg:duration-500 hover:grayscale-0 lg:hover:opacity-100 lg:mx-6 xl:mx-8"
+                  {[0, 1, 2, 3].map((index) => (
+                    <motion.li key={index} className="item" variants={item} />
+                  ))}
+                  <a
+                    href="https://html5up.net/"
+                    target="blank"
+                    className="md:max-w-[100px] max-w-[80px] flex justify-center items-center mx-4 py-4 lg:grayscale opacity-90 lg:transition lg:duration-300 hover:grayscale-0 lg:hover:opacity-100 lg:mx-6 xl:mx-8"
+                  >
+                    <Image
+                      src="/icon/html.png"
+                      alt="foto profile"
+                      width={1000}
+                      height={0}
+                    />
+                  </a>
+                </motion.ul>
+
+                <motion.ul
+                  className="container"
+                  variants={container}
+                  initial="hidden"
+                  animate="visible"
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
                 >
-                  <Image
-                    src="/icon/css.png"
-                    alt="foto profile"
-                    width={1000}
-                    height={0}
-                    className="md:w-[70px] h-[auto]"
-                  />
-                </a>
-                <a
-                  href="https://tailwindcss.com/"
-                  target="blank"
-                  className="md:max-w-[100px] max-w-[80px] flex justify-center items-center mx-4 py-4 lg:grayscale opacity-90 lg:transition lg:duration-500 hover:grayscale-0 lg:hover:opacity-100 lg:mx-6 xl:mx-8"
+                  {[0, 1, 2, 3].map((index) => (
+                    <motion.li key={index} className="item" variants={item} />
+                  ))}
+                  <a
+                    href="https://www.css3.com/"
+                    target="blank"
+                    className="md:max-w-[100px] max-w-[60px] flex justify-center mx-4 py-4 lg:grayscale opacity-90 lg:transition lg:duration-300 hover:grayscale-0 lg:hover:opacity-100 lg:mx-6 xl:mx-8"
+                  >
+                    <Image
+                      src="/icon/css.png"
+                      alt="foto profile"
+                      width={1000}
+                      height={0}
+                      className="md:w-[70px] h-[auto]"
+                    />
+                  </a>
+                </motion.ul>
+
+                <motion.ul
+                  className="container"
+                  variants={container}
+                  initial="hidden"
+                  animate="visible"
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
                 >
-                  <Image
-                    src="/icon/tw1.png"
-                    alt="foto profile"
-                    width={1000}
-                    height={0}
-                  />
-                </a>
+                  {[0, 1, 2, 3].map((index) => (
+                    <motion.li key={index} className="item" variants={item} />
+                  ))}
+                  <a
+                    href="https://tailwindcss.com/"
+                    target="blank"
+                    className="md:max-w-[100px] max-w-[80px] flex justify-center items-center mx-4 py-4 lg:grayscale opacity-90 lg:transition lg:duration-300 hover:grayscale-0 lg:hover:opacity-100 lg:mx-6 xl:mx-8"
+                  >
+                    <Image
+                      src="/icon/tw1.png"
+                      alt="foto profile"
+                      width={1000}
+                      height={0}
+                    />
+                  </a>
+                </motion.ul>
               </div>
             </div>
           </div>
